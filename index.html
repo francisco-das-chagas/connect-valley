@@ -79,6 +79,33 @@
       .text-reveal-mask { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); transform: translateY(0); opacity: 1; transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
       .text-hidden { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); transform: translateY(20px); opacity: 0; }
       .text-shadow-glow-blue { text-shadow: 0 0 20px rgba(0, 85, 255, 0.6); }
+  
+      /* Animação de desenho (Stroke Dash) */
+@keyframes draw-loop {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -2000;
+  }
+}
+
+.big-logo-path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw-loop 10s linear infinite;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Brilho sutil na logo de fundo */
+.big-stroke-logo {
+  filter: drop-shadow(0 0 8px rgba(242, 201, 76, 0.2));
+}
+
 
       /* BARRA BOTTOM */
       .fixed-bottom-bar { background: rgba(3, 8, 22, 0.98); backdrop-filter: blur(20px); border-top: 1px solid rgba(242, 201, 76, 0.3); transform: translateY(100%); transition: transform 0.5s ease-out; box-shadow: 0 -10px 40px rgba(0,0,0,0.8); }
@@ -296,10 +323,10 @@
       <div class="w-full md:max-w-md flex flex-col gap-2">
         <div class="flex justify-between text-xs uppercase font-bold tracking-wider text-gray-300 font-display">
           <span>Lote Atual</span>
-          <span class="text-brand-gold">75% Vendido</span>
+          <span class="text-brand-gold">0% Vendido</span>
         </div>
         <div class="w-full h-4 bg-gray-800 rounded-full overflow-hidden border border-gray-700">
-          <div class="h-full bg-gradient-to-r from-brand-blue-accent to-brand-gold progress-fill"></div>
+          <div class="h bg-gradient-to-r from-brand-blue-accent to-brand-gold progress-fill" ></div> <!-- h-full preenche a barra -->
         </div>
       </div>
       <a href="#ingressos" class="hidden md:block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded text-sm font-bold uppercase tracking-wider transition font-display">
@@ -322,6 +349,41 @@
       </div>
     </div>
 
+   <section class="relative py-32 bg-brand-blue-dark overflow-hidden flex items-center justify-center min-h-[60vh]">
+  
+  <div class="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none select-none">
+    <svg class="w-[120%] md:w-[70%] h-auto big-stroke-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6599.15 1712.87">
+      <g fill="none" stroke="#F2C94C" stroke-width="4">
+        <path class="big-logo-path" d="M2306.9 611.24c0,-152.69 117.02,-276.48 261.37,-276.48 144.35,0 261.36,123.79 261.36,276.48 0,152.7 -117.02,276.49 -261.36,276.49 -144.35,0 -261.37,-123.79 -261.37,-276.49zm2255.61 -279.13c96.23,0 208.79,0 298.6,0 27.71,0 53.25,0 75.47,0l0 -147.62 -75.47 0 -183.83 0 -115.46 0 -167.47 0 0 147.62 0 208.18 0 149.95 0 195.24 0 151.79 167.47 0 299.29 0 75.47 0 26.29 0 0 -151.79 -26.29 0 -75.47 0 -299.29 0 0 -195.24 299.29 0 0 -149.95 -299.29 0 0.69 -208.18zm1805.58 0.21c11.04,-50.79 24.97,-114.87 32.17,-147.83l-236.74 0 -165 0 -175.03 0c-7.2,32.95 -21.14,97.04 -32.17,147.83l207.2 0 0 702.24c39.25,0 104.63,0 165,0l0 -702.24 204.56 0zm-613.97 553.91l-130.28 -114.52c-47.63,68.21 -124.74,112.53 -211.77,112.53 -144.65,0 -261.92,-122.45 -261.92,-273.49 0,-151.04 117.27,-273.49 261.92,-273.49 88.23,0 166.27,45.55 213.73,115.36l130.33 -113.37c-80.53,-100.64 -204.72,-165.15 -344.05,-165.15 -242.76,0 -439.56,195.83 -439.56,437.4 0,241.57 196.8,437.4 439.56,437.4 138.18,0 261.48,-63.45 342.06,-162.67zm-3648.6 0l-130.28 -114.52c-47.63,68.21 -124.74,112.53 -211.77,112.53 -144.65,0 -261.92,-122.45 -261.92,-273.49 0,-151.04 117.27,-273.49 261.92,-273.49 88.23,0 166.27,45.55 213.73,115.36l130.33 -113.37c-80.53,-100.64 -204.72,-165.15 -344.05,-165.15 -242.76,0 -439.56,195.83 -439.56,437.4 0,241.57 196.8,437.4 439.56,437.4 138.18,0 261.48,-63.45 342.06,-162.67zm1593.99 -417.26l48.07 71.33 101.07 149.95 131.59 195.24 102.3 151.79 4.12 0 167.47 0 0 -151.79 0 -195.24 0 -149.95 0 -205.31 0 -150.49 -167.47 0 0 150.49 0 205.31 0 149.95 0 78.46 -51.28 -78.46 -98 -149.95 -134.18 -205.31 -98.36 -150.49 -5.34 0 -26.99 0 -140.48 0 0 150.49 0 67.53 121.1 137.77 19.38 22.04 26.99 30.71 0 -52.75 0 -71.33zm-29.11 291.5l-51.02 -70.22 -87.34 -120.19 -21.63 -29.76 -149.18 -205.31 -109.07 -150.1 -0.29 -0.39 -167.18 0 0 150.49 0 205.31 0 149.95 0 195.24 0 151.79 167.47 0 0 -151.79 0 -195.24 0 -149.95 0 -68.82 50.19 68.82 109.36 149.95 120.33 164.99 22.06 30.25 110.7 151.79 7.72 0 26.99 0 137.12 0 0 -151.79 0 -26.08 -131.05 -169.16 -6.07 -7.83 -26.99 -34.84 0 42.67 -0.92 0 -1.19 70.22zm-1102.13 -586.87c-240.86,0 -436.11,195.8 -436.11,437.33 0,241.53 195.25,437.33 436.11,437.33 240.86,0 436.11,-195.8 436.11,-437.33 0,-241.53 -195.25,-437.33 -436.11,-437.33z"/>
+        <path class="big-logo-path" d="M6526.58 200.49c37.36,0 67.64,30.1 67.64,67.22 0,37.12 -30.29,67.22 -67.64,67.22 -37.36,0 -67.64,-30.1 -67.64,-67.22 0,-37.12 30.29,-67.22 67.64,-67.22z"/>
+        <path class="big-logo-path" d="M6498.86 310.1l0 -82.72 30.71 0c7.72,0 13.33,0.75 16.83,2.23 3.51,1.48 6.3,4.12 8.4,7.91 2.1,3.81 3.16,8.15 3.16,13.04 0,6.22 -1.58,11.34 -4.76,15.38 -3.18,4.04 -7.92,6.59 -14.24,7.65 3.14,2.1 5.73,4.41 7.77,6.93 2.05,2.52 4.81,7.01 8.27,13.44l8.81 16.14 -17.43 0 -10.46 -18.06c-3.75,-6.41 -6.32,-10.46 -7.71,-12.13 -1.38,-1.66 -2.84,-2.81 -4.39,-3.43 -1.56,-0.62 -4.02,-0.93 -7.38,-0.93l-2.96 0 0 34.55 -14.62 0zm14.62 -47.72l10.79 0c6.99,0 11.35,-0.35 13.09,-1.02 1.73,-0.67 3.11,-1.85 4.08,-3.51 0.99,-1.66 1.48,-3.73 1.48,-6.22 0,-2.79 -0.66,-5.03 -1.95,-6.76 -1.29,-1.71 -3.13,-2.79 -5.48,-3.24 -1.19,-0.19 -4.74,-0.29 -10.64,-0.29l-11.38 0 0 21.03z"/>
+        <path class="big-logo-path" d="M867.47 475.47c-42.36,-42.49 -385.31,-386.61 -426.46,-429.93 -80.34,-84.58 -162.73,-31.37 -161.27,35.48 1,46.36 43.73,76.25 74.13,107.03 128.42,130.01 431.26,436.64 459.34,465.53 19.64,20.2 46.37,23.34 68.33,19.16 33.63,-6.41 55.65,-37.28 79.42,-60.81 58.81,-58.23 162.36,-160.77 190.88,-188.96 40.51,-40.05 80.05,-98.44 21.75,-147.21 -58.29,-48.77 -113.04,11.59 -113.04,11.59l-193.08 188.13z"/>
+        <path class="big-logo-path" d="M678.43 863.89c-1,-6.53 -2.82,-13.05 -5.27,-19.49 -19.22,-50.48 -195.11,-216.64 -234.23,-256.79 -111.53,-114.48 -245.28,-251.75 -269.31,-278.6 -77.88,-87.02 -163.12,-37.48 -164.22,28.88 -0.39,23.58 9.09,44.44 25.06,61.18 148.45,155.56 307.24,307.88 454.31,464.2 -102.54,100.06 -309.66,301.41 -408.67,399.86 -30.4,30.23 -73.12,59.59 -74.13,105.12 -1.45,65.65 80.93,117.91 161.27,34.84 29.92,-30.94 221.55,-217.29 340.13,-332.68 44.46,-43.26 78.65,-76.55 90.2,-87.93 0,0 -1.85,-2.09 35.66,-36.24 30.28,-27.58 53.2,-56.18 49.19,-82.36z"/>
+        <path class="big-logo-path" d="M879.06 1052.46c-21.96,-4.11 -48.69,-1.02 -68.33,18.82 -28.08,28.37 -338.37,329.17 -466.79,456.86 -30.4,30.23 -73.12,59.59 -74.13,105.12 -1.45,65.65 80.93,117.91 161.27,34.84 41.14,-42.54 387.98,-378.87 430.33,-420.61l179.14 167.66c0,0 46.73,54.49 105.02,6.59 58.29,-47.9 38.91,-93.27 -1.6,-132.61 -35.04,-34.02 -229.28,-230.02 -264.92,-236.68z"/>
+        <path class="big-logo-path" d="M3188.63 1518.82l0 -339.96c-23.15,0 -43.99,0 -59.27,0l0 339.96 0 47.71c14.15,0 35.02,0 59.27,0 48.37,0 110.15,0 158.68,0l0 -47.71c-48.53,0 -110.32,0 -158.68,0z"/>
+        <path class="big-logo-path" d="M3935.49 1518.82l0 -339.96c-23.15,0 -43.99,0 -59.27,0l0 339.96 0 47.71c14.15,0 35.02,0 59.27,0 48.37,0 110.15,0 158.68,0l0 -47.71c-48.53,0 -110.32,0 -158.68,0z"/>
+        <polygon class="big-logo-path" points="1665.25,1567.36 1813.15,1176.38 1751.54,1176.38 1633.42,1506.93 1519.41,1177.92 1454.38,1177.92 1603.75,1567.36 "/>
+        <path class="big-logo-path" d="M2312.77 1421.33l-19.7 52.27 -35.46 94.11 56.13 -0.37 35.27 -93.59c51.56,0.04 114.66,-0.12 173.46,-0.33l35.15 93.29 55.85 -0.37 -35.1 -93.15 -19.7 -52.27 -91.97 -244.07c-1.95,0 -3.89,0.01 -5.92,0.01 -16.91,0.04 -33.73,0.08 -50.11,0.1 -1.98,0 -3.96,0.01 -5.92,0.01l-92.07 244.33zm189.99 -0.19c-45.55,0.15 -92.59,0.26 -134.03,0.26l67.07 -177.98 66.97 177.72z"/>
+        <polygon class="big-logo-path" points="5346.32,1178.57 5491.98,1415.46 5491.98,1568.89 5548.92,1568.89 5548.92,1422.85 5698.52,1176.93 5631.97,1176.11 5523.1,1370.83 5413.42,1178.57 "/>
+        <path class="big-logo-path" d="M4840.38 1227.02l0 -48.76c-5.08,0 -10.27,0 -15.53,0 -48.24,0 -102.99,0 -148.33,0 -20.3,0 -38.71,0 -53.8,0l0 48.76 0 112.45 0 50.59 0 128.47 0 47.69c15.09,0 33.5,0 53.8,0 45.34,0 100.09,0 148.33,0 5.26,0 10.44,0 15.53,0l0 -47.69c-5.08,0 -10.27,0 -15.53,0 -48.24,0 -102.99,0 -148.33,0l0 -128.47c45.34,0 100.09,0 148.33,0l0 -50.59c-48.24,0 -102.99,0 -148.33,0l0 -112.45c45.34,0 100.09,0 148.33,0 5.26,0 10.44,0 15.53,0z"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="relative z-10 container mx-auto text-center px-4">
+    <span class="block text-brand-blue-accent font-display uppercase tracking-[0.4em] text-sm md:text-base mb-4 font-bold simple-reveal-hidden">
+      Save the Date
+    </span>
+    <h2 class="text-5xl md:text-8xl font-black font-display text-white uppercase leading-none simple-reveal-hidden">
+      17 e 18 <br />
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-white">de Outubro</span>
+    </h2>
+    <div class="mt-8 flex justify-center gap-4 simple-reveal-hidden">
+        <div class="h-1 w-20 bg-brand-gold rounded-full"></div>
+        <div class="h-1 w-4 bg-brand-blue-accent rounded-full"></div>
+    </div>
+  </div>
+  </section>
     <section id="sobre" class="py-32 bg-brand-blue-dark relative overflow-hidden">
       <div class="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-brand-blue-accent blur-[150px] opacity-20"></div>
       <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center relative z-10">
@@ -389,7 +451,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[250px] gap-4 md:gap-6">
                 
                 <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
-                    <img src="./assets/foto-1.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Imersão Principal">
+                    <img src="./assets/foto-dr-roneely.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Imersão Principal">
                     <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                     <div class="absolute bottom-6 left-6 z-20">
                         <span class="text-brand-gold font-bold uppercase tracking-wider text-sm mb-1 block">Palco 360°</span>
@@ -421,7 +483,7 @@
                 </div>
 
                  <div class="col-span-2 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
-                    <img src="./assets/foto-7.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto Horizontal">
+                    <img src="./assets/foto-7-novo.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto Horizontal">
                       <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                 </div>
 
@@ -545,21 +607,21 @@
         
         <div class="relative w-full max-w-2xl mx-auto mb-20 text-center simple-reveal-hidden">
             <p class="text-brand-gold font-bold font-display uppercase tracking-[0.2em] mb-4 text-xl text-shadow-glow-blue">
-                75% dos ingressos vendidos
+                0% dos ingressos vendidos
             </p>
             <div class="h-16 border border-white/10 rounded-xl p-2 bg-[#050B14] flex gap-1 shadow-[0_0_30px_rgba(242,201,76,0.1)]">
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.05s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.1s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.15s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.2s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.25s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.3s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.35s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.4s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.45s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.5s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.55s"></div>
-               <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.6s"></div>
+               <!-- <div class="h-full flex-1 rounded-sm bg-gradient-to-t from-brand-blue-accent via-blue-400 to-brand-gold opacity-100 bar-filled" style="animation-delay: 0.05s"></div> --> <!-- div que colore o barra-->
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
                <div class="h-full flex-1 rounded-sm bg-white/5"></div>
                <div class="h-full flex-1 rounded-sm bg-white/5"></div>
                <div class="h-full flex-1 rounded-sm bg-white/5"></div>
@@ -627,8 +689,8 @@
                 <div class="absolute inset-0 bg-gradient-to-b from-brand-gold/10 to-brand-blue-mid border border-brand-gold/30"></div>
                 <div class="relative p-6 text-center flex flex-col h-full justify-between">
                   <div>
-                    <h3 class="text-2xl font-black text-brand-gold font-display uppercase italic">VIP</h3>
-                    <p class="text-brand-gold/70 text-xs mt-2 uppercase tracking-wide">Acesso Exclusivo</p>
+                    <h3 class="text-2xl font-black text-brand-gold font-display uppercase italic">GOLD</h3>
+                    <p class="text-brand-gold/70 text-xs mt-2 uppercase tracking-wide">Acesso Vip</p>
                   </div>
                   <div class="mt-6">
                     <p class="text-xs text-brand-gold">12x de R$ 59,94</p>
@@ -713,7 +775,7 @@
         </div>
         
         <div class="mb-16">
-          <h3 class="text-center text-white/50 text-lg uppercase tracking-widest font-bold mb-6 font-display">Institucional</h3>
+          <h3 class="text-center text-white/50 text-lg uppercase tracking-widest font-bold mb-6 font-display">Ultra</h3>
           <div class="flex flex-wrap justify-center gap-8 md:gap-12 opacity-90 max-w-6xl mx-auto">
               <div class="logo-grid-item logo-inst hover-glow-gold">
                  <img src="./assets/logos/logo-banco-nordeste.svg" alt="Banco do Nordeste">
@@ -844,7 +906,7 @@
 
           <div class="sponsor-card plan-vip py-12 px-8 min-h-[500px] rounded-2xl flex flex-col items-center text-center bg-brand-blue-mid/40 relative overflow-hidden simple-reveal-hidden hover-glow-blue">
             <div class="absolute top-0 right-0 bg-brand-gold text-brand-blue-dark text-[10px] font-bold px-3 py-1 uppercase font-display">Destaque</div>
-            <h3 class="text-4xl font-black text-white mb-8 font-display uppercase">Institucional</h3>
+            <h3 class="text-4xl font-black text-white mb-8 font-display uppercase">Ultra</h3>
             <ul class="text-left w-full space-y-3 mb-8 text-sm text-white check-list flex-grow">
               <li>Estande 6,00 x 3,00m</li>
               <li>Exclusividade por Segmento</li>
@@ -852,7 +914,7 @@
               <li>Vídeo Institucional 3min ou Palestra</li>
               <li>10 Vouchers + 2 VIP (Inclusos)</li>
             </ul>
-            <a href="#" class="mt-auto bg-brand-gold text-brand-blue-dark font-bold px-6 py-3 rounded-full hover:bg-white transition w-full shadow-lg shadow-brand-gold/20 font-display tracking-widest uppercase text-sm">Quero Ser VIP</a>
+            <a href="#" class="mt-auto bg-brand-gold text-brand-blue-dark font-bold px-6 py-3 rounded-full hover:bg-white transition w-full shadow-lg shadow-brand-gold/20 font-display tracking-widest uppercase text-sm">Quero Ser ULTRA</a>
           </div>
         </div>
       </div>
@@ -1189,6 +1251,32 @@
           btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0px, 0px)'; });
         }
       }
+
+// --- ANIMAÇÃO DEPTH EFFECT (Texto Atrás) ---
+      
+      // 1. O Texto se move levemente para baixo (mais lento que o scroll)
+      gsap.to(".depth-text", {
+        yPercent: 30, // Move 30% para baixo
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".depth-image",
+          start: "top bottom", // Começa quando a imagem entra na tela
+          end: "bottom top",   // Termina quando sai
+          scrub: true
+        }
+      });
+
+      // 2. A imagem da pessoa sobe levemente (dando a sensação de solidez)
+      gsap.from(".depth-image", {
+        y: 100, // Começa 100px mais para baixo
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".depth-image",
+          start: "top 80%", // Começa quando o topo da sessão está a 80% da tela
+        }
+      });
     </script>
   </body>
 </html>
