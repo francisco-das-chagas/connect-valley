@@ -1093,7 +1093,7 @@
         let tl = gsap.timeline({
             onComplete: () => {
                 gsap.to(loader, {
-                    yPercent: -100, duration: 1, ease: "power4.inOut",
+                    yPercent: -100, duration: 0.2, ease: "power4.inOut",
                     onComplete: () => {
                         loader.style.display = "none";
                         document.body.style.overflow = "auto";
@@ -1104,7 +1104,7 @@
                 });
             }
         });
-        tl.to(".path-anim", { strokeDashoffset: 0, duration: 2.5, ease: "power2.inOut", stagger: 0.1 }).to(".path-anim", { fillOpacity: 1, strokeOpacity: 0, duration: 1 }, "-=0.5");
+        tl.to(".path-anim", { strokeDashoffset: 0, duration: 0.3, ease: "power2.inOut", stagger: 0.1 }).to(".path-anim", { fillOpacity: 1, strokeOpacity: 0, duration: 1 }, "-=0.3");
       });
 
       function initSwipers() {
