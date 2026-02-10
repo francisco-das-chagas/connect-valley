@@ -58,7 +58,7 @@
       .fill-white { fill: #ffffff; }
       .stroke-gold { stroke: #F6CE54; stroke-width: 9.87; }
       .stroke-white { stroke: #ffffff; stroke-width: 3.95; }
-      .no-fill { fill: none; }
+      .no-fill { fill: none !important; }
 
       /* UTILS */
       nav { background-color: rgba(3, 8, 22, 0.9) !important; backdrop-filter: blur(20px) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; transition: all 0.3s ease; }
@@ -79,10 +79,10 @@
       .text-reveal-mask { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); transform: translateY(0); opacity: 1; transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
       .text-hidden { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); transform: translateY(20px); opacity: 0; }
       .text-shadow-glow-blue { text-shadow: 0 0 20px rgba(0, 85, 255, 0.6); }
-  
+   
       /* Animação de desenho (Stroke Dash) */
       @keyframes draw-loop { 0% { stroke-dashoffset: 2000; } 50% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -2000; } }
-      .big-logo-path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw-loop 10s linear infinite; stroke-linecap: round; stroke-linejoin: round; }
+      .big-logo-path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw-loop 10s linear infinite; stroke-linecap: round; stroke-linejoin: round; fill: none !important; }
       .big-stroke-logo { filter: drop-shadow(0 0 8px rgba(242, 201, 76, 0.2)); }
 
       /* BARRA BOTTOM */
@@ -144,7 +144,7 @@
         
         <div class="relative bg-black h-[300px] md:h-auto group">
            <video id="modal-video" class="w-full h-full object-cover opacity-60" poster="./assets/background.JPG" loop muted playsinline>
-              <source src="./assets/hero-video.mp4" type="video/mp4">
+             <source src="./assets/hero-video.mp4" type="video/mp4">
            </video>
            <div class="absolute inset-0 flex items-center justify-center">
              <div class="w-16 h-16 rounded-full bg-brand-gold flex items-center justify-center text-brand-blue-dark cursor-pointer hover:scale-110 transition">
@@ -163,8 +163,8 @@
           </p>
 
           <div class="flex gap-4">
-             <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
-             <a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+              <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+              <a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -232,7 +232,7 @@
           class="w-full h-full object-cover grayscale brightness-50"
           id="hero-bg"
         >
-          <source src="./assets/hero-video.mp4" type="video/mp4">
+          <source src="./assets/hero-video-2.mp4" type="video/mp4">
         </video>
       </div>
       <div class="absolute inset-0 bg-hero-gradient z-10"></div>
@@ -303,18 +303,21 @@
   <div class="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none select-none">
     <svg class="w-[120%] md:w-[70%] h-auto big-stroke-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6599.15 1712.87">
       <g fill="none" stroke="#F2C94C" stroke-width="4">
-        <path class="big-logo-path" d="M2306.9 611.24c0,-152.69 117.02,-276.48 261.37,-276.48 144.35,0 261.36,123.79 261.36,276.48 0,152.7 -117.02,276.49 -261.36,276.49 -144.35,0 -261.37,-123.79 -261.37,-276.49zm2255.61 -279.13c96.23,0 208.79,0 298.6,0 27.71,0 53.25,0 75.47,0l0 -147.62 -75.47 0 -183.83 0 -115.46 0 -167.47 0 0 147.62 0 208.18 0 149.95 0 195.24 0 151.79 167.47 0 299.29 0 75.47 0 26.29 0 0 -151.79 -26.29 0 -75.47 0 -299.29 0 0 -195.24 299.29 0 0 -149.95 -299.29 0 0.69 -208.18zm1805.58 0.21c11.04,-50.79 24.97,-114.87 32.17,-147.83l-236.74 0 -165 0 -175.03 0c-7.2,32.95 -21.14,97.04 -32.17,147.83l207.2 0 0 702.24c39.25,0 104.63,0 165,0l0 -702.24 204.56 0zm-613.97 553.91l-130.28 -114.52c-47.63,68.21 -124.74,112.53 -211.77,112.53 -144.65,0 -261.92,-122.45 -261.92,-273.49 0,-151.04 117.27,-273.49 261.92,-273.49 88.23,0 166.27,45.55 213.73,115.36l130.33 -113.37c-80.53,-100.64 -204.72,-165.15 -344.05,-165.15 -242.76,0 -439.56,195.83 -439.56,437.4 0,241.57 196.8,437.4 439.56,437.4 138.18,0 261.48,-63.45 342.06,-162.67zm-3648.6 0l-130.28 -114.52c-47.63,68.21 -124.74,112.53 -211.77,112.53 -144.65,0 -261.92,-122.45 -261.92,-273.49 0,-151.04 117.27,-273.49 261.92,-273.49 88.23,0 166.27,45.55 213.73,115.36l130.33 -113.37c-80.53,-100.64 -204.72,-165.15 -344.05,-165.15 -242.76,0 -439.56,195.83 -439.56,437.4 0,241.57 196.8,437.4 439.56,437.4 138.18,0 261.48,-63.45 342.06,-162.67zm1593.99 -417.26l48.07 71.33 101.07 149.95 131.59 195.24 102.3 151.79 4.12 0 167.47 0 0 -151.79 0 -195.24 0 -149.95 0 -205.31 0 -150.49 -167.47 0 0 150.49 0 205.31 0 149.95 0 78.46 -51.28 -78.46 -98 -149.95 -134.18 -205.31 -98.36 -150.49 -5.34 0 -26.99 0 -140.48 0 0 150.49 0 67.53 121.1 137.77 19.38 22.04 26.99 30.71 0 -52.75 0 -71.33zm-29.11 291.5l-51.02 -70.22 -87.34 -120.19 -21.63 -29.76 -149.18 -205.31 -109.07 -150.1 -0.29 -0.39 -167.18 0 0 150.49 0 205.31 0 149.95 0 195.24 0 151.79 167.47 0 0 -151.79 0 -195.24 0 -149.95 0 -68.82 50.19 68.82 109.36 149.95 120.33 164.99 22.06 30.25 110.7 151.79 7.72 0 26.99 0 137.12 0 0 -151.79 0 -26.08 -131.05 -169.16 -6.07 -7.83 -26.99 -34.84 0 42.67 -0.92 0 -1.19 70.22zm-1102.13 -586.87c-240.86,0 -436.11,195.8 -436.11,437.33 0,241.53 195.25,437.33 436.11,437.33 240.86,0 436.11,-195.8 436.11,-437.33 0,-241.53 -195.25,-437.33 -436.11,-437.33z"/>
-        <path class="no-fill stroke-gold path-anim" d="M6526.58 200.49c37.36,0 67.64,30.1 67.64,67.22 0,37.12 -30.29,67.22 -67.64,67.22 -37.36,0 -67.64,-30.1 -67.64,-67.22 0,-37.12 30.29,-67.22 67.64,-67.22z"/>
-        <path class="fill-gold path-anim" d="M6498.86 310.1l0 -82.72 30.71 0c7.72,0 13.33,0.75 16.83,2.23 3.51,1.48 6.3,4.12 8.4,7.91 2.1,3.81 3.16,8.15 3.16,13.04 0,6.22 -1.58,11.34 -4.76,15.38 -3.18,4.04 -7.92,6.59 -14.24,7.65 3.14,2.1 5.73,4.41 7.77,6.93 2.05,2.52 4.81,7.01 8.27,13.44l8.81 16.14 -17.43 0 -10.46 -18.06c-3.75,-6.41 -6.32,-10.46 -7.71,-12.13 -1.38,-1.66 -2.84,-2.81 -4.39,-3.43 -1.56,-0.62 -4.02,-0.93 -7.38,-0.93l-2.96 0 0 34.55 -14.62 0zm14.62 -47.72l10.79 0c6.99,0 11.35,-0.35 13.09,-1.02 1.73,-0.67 3.11,-1.85 4.08,-3.51 0.99,-1.66 1.48,-3.73 1.48,-6.22 0,-2.79 -0.66,-5.03 -1.95,-6.76 -1.29,-1.71 -3.13,-2.79 -5.48,-3.24 -1.19,-0.19 -4.74,-0.29 -10.64,-0.29l-11.38 0 0 21.03z"/>
-        <path class="fill-white stroke-white path-anim" d="M867.47 475.47c-42.36,-42.49 -385.31,-386.61 -426.46,-429.93 -80.34,-84.58 -162.73,-31.37 -161.27,35.48 1,46.36 43.73,76.25 74.13,107.03 128.42,130.01 431.26,436.64 459.34,465.53 19.64,20.2 46.37,23.34 68.33,19.16 33.63,-6.41 55.65,-37.28 79.42,-60.81 58.81,-58.23 162.36,-160.77 190.88,-188.96 40.51,-40.05 80.05,-98.44 21.75,-147.21 -58.29,-48.77 -113.04,11.59 -113.04,11.59l-193.08 188.13z"/>
-        <path class="fill-white stroke-white path-anim" d="M678.43 863.89c-1,-6.53 -2.82,-13.05 -5.27,-19.49 -19.22,-50.48 -195.11,-216.64 -234.23,-256.79 -111.53,-114.48 -245.28,-251.75 -269.31,-278.6 -77.88,-87.02 -163.12,-37.48 -164.22,28.88 -0.39,23.58 9.09,44.44 25.06,61.18 148.45,155.56 307.24,307.88 454.31,464.2 -102.54,100.06 -309.66,301.41 -408.67,399.86 -30.4,30.23 -73.12,59.59 -74.13,105.12 -1.45,65.65 80.93,117.91 161.27,34.84 29.92,-30.94 221.55,-217.29 340.13,-332.68 44.46,-43.26 78.65,-76.55 90.2,-87.93 0,0 -1.85,-2.09 35.66,-36.24 30.28,-27.58 53.2,-56.18 49.19,-82.36z"/>
-        <path class="fill-white stroke-white path-anim" d="M879.06 1052.46c-21.96,-4.11 -48.69,-1.02 -68.33,18.82 -28.08,28.37 -338.37,329.17 -466.79,456.86 -30.4,30.23 -73.12,59.59 -74.13,105.12 -1.45,65.65 80.93,117.91 161.27,34.84 41.14,-42.54 387.98,-378.87 430.33,-420.61l179.14 167.66c0,0 46.73,54.49 105.02,6.59 58.29,-47.9 38.91,-93.27 -1.6,-132.61 -35.04,-34.02 -229.28,-230.02 -264.92,-236.68z"/>
-        <path class="fill-white path-anim" d="M3188.63 1518.82l0 -339.96c-23.15,0 -43.99,0 -59.27,0l0 339.96 0 47.71c14.15,0 35.02,0 59.27,0 48.37,0 110.15,0 158.68,0l0 -47.71c-48.53,0 -110.32,0 -158.68,0z"/>
-        <path class="fill-white path-anim" d="M3935.49 1518.82l0 -339.96c-23.15,0 -43.99,0 -59.27,0l0 339.96 0 47.71c14.15,0 35.02,0 59.27,0 48.37,0 110.15,0 158.68,0l0 -47.71c-48.53,0 -110.32,0 -158.68,0z"/>
-        <polygon class="fill-white path-anim" points="1665.25,1567.36 1813.15,1176.38 1751.54,1176.38 1633.42,1506.93 1519.41,1177.92 1454.38,1177.92 1603.75,1567.36 "/>
-        <path class="fill-white path-anim" d="M2312.77 1421.33l-19.7 52.27 -35.46 94.11 56.13 -0.37 35.27 -93.59c51.56,0.04 114.66,-0.12 173.46,-0.33l35.15 93.29 55.85 -0.37 -35.1 -93.15 -19.7 -52.27 -91.97 -244.07c-1.95,0 -3.89,0.01 -5.92,0.01 -16.91,0.04 -33.73,0.08 -50.11,0.1 -1.98,0 -3.96,0.01 -5.92,0.01l-92.07 244.33zm189.99 -0.19c-45.55,0.15 -92.59,0.26 -134.03,0.26l67.07 -177.98 66.97 177.72z"/>
-        <polygon class="fill-white path-anim" points="5346.32,1178.57 5491.98,1415.46 5491.98,1568.89 5548.92,1568.89 5548.92,1422.85 5698.52,1176.93 5631.97,1176.11 5523.1,1370.83 5413.42,1178.57 "/>
-        <path class="fill-white path-anim" d="M4840.38 1227.02l0 -48.76c-5.08,0 -10.27,0 -15.53,0 -48.24,0 -102.99,0 -148.33,0 -20.3,0 -38.71,0 -53.8,0l0 48.76 0 112.45 0 50.59 0 128.47 0 47.69c15.09,0 33.5,0 53.8,0 45.34,0 100.09,0 148.33,0 5.26,0 10.44,0 15.53,0l0 -47.69c-5.08,0 -10.27,0 -15.53,0 -48.24,0 -102.99,0 -148.33,0l0 -128.47c45.34,0 100.09,0 148.33,0l0 -50.59c-48.24,0 -102.99,0 -148.33,0l0 -112.45c45.34,0 100.09,0 148.33,0 5.26,0 10.44,0 15.53,0z"/>
+        
+        <path class="big-logo-path" d="M2306.9 611.24c0,-152.69 117.02,-276.48 261.37,-276.48 144.35,0 261.36,123.79 261.36,276.48 0,152.7 -117.02,276.49 -261.36,276.49 -144.35,0 -261.37,-123.79 -261.37,-276.49zm2255.61 -279.13c96.23,0 208.79,0 298.6,0 27.71,0 53.25,0 75.47,0l0 -147.62 -75.47 0 -183.83 0 -115.46 0 -167.47 0 0 147.62 0 208.18 0 149.95 0 195.24 0 151.79 167.47 0 299.29 0 75.47 0 26.29 0 0 -151.79 -26.29 0 -75.47 0 -299.29 0 0 -195.24 299.29 0 0 -149.95 -299.29 0 0.69 -208.18zm1805.58 0.21c11.04,-50.79 24.97,-114.87 32.17,-147.83l-236.74 0 -165 0 -175.03 0c-7.2,32.95 -21.14,97.04 -32.17,147.83l207.2 0 0 702.24c39.25,0 104.63,0 165,0l0 -702.24 204.56 0zm-613.97 553.91l-130.28 -114.52c-47.63,68.21 -124.74,112.53 -211.77,112.53 -144.65,0 -261.92,-122.45 -261.92,-273.49 0,-151.04 117.27,-273.49 261.92,-273.49 88.23,0 166.27,45.55 213.73,115.36l130.33 -113.37c-80.53,-100.64 -204.72,-165.15 -344.05,-165.15 -242.76,0 -439.56,195.83 -439.56,437.4 0,241.57 196.8,437.4 439.56,437.4 138.18,0 261.48,-63.45 342.06,-162.67zm-3648.6 0l-130.28 -114.52c-47.63,68.21 -124.74,112.53 -211.77,112.53 -144.65,0 -261.92,-122.45 -261.92,-273.49 0,-151.04 117.27,-273.49 261.92,-273.49 88.23,0 166.27,45.55 213.73,115.36l130.33 -113.37c-80.53,-100.64 -204.72,-165.15 -344.05,-165.15 -242.76,0 -439.56,195.83 -439.56,437.4 0,241.57 196.8,437.4 439.56,437.4 138.18,0 261.48,-63.45 342.06,-162.67z"/>
+        
+        <path class="big-logo-path" d="M6526.58 200.49c37.36,0 67.64,30.1 67.64,67.22 0,37.12 -30.29,67.22 -67.64,67.22 -37.36,0 -67.64,-30.1 -67.64,-67.22 0,-37.12 30.29,-67.22 67.64,-67.22z"/>
+        <path class="big-logo-path" d="M6498.86 310.1l0 -82.72 30.71 0c7.72,0 13.33,0.75 16.83,2.23 3.51,1.48 6.3,4.12 8.4,7.91 2.1,3.81 3.16,8.15 3.16,13.04 0,6.22 -1.58,11.34 -4.76,15.38 -3.18,4.04 -7.92,6.59 -14.24,7.65 3.14,2.1 5.73,4.41 7.77,6.93 2.05,2.52 4.81,7.01 8.27,13.44l8.81 16.14 -17.43 0 -10.46 -18.06c-3.75,-6.41 -6.32,-10.46 -7.71,-12.13 -1.38,-1.66 -2.84,-2.81 -4.39,-3.43 -1.56,-0.62 -4.02,-0.93 -7.38,-0.93l-2.96 0 0 34.55 -14.62 0zm14.62 -47.72l10.79 0c6.99,0 11.35,-0.35 13.09,-1.02 1.73,-0.67 3.11,-1.85 4.08,-3.51 0.99,-1.66 1.48,-3.73 1.48,-6.22 0,-2.79 -0.66,-5.03 -1.95,-6.76 -1.29,-1.71 -3.13,-2.79 -5.48,-3.24 -1.19,-0.19 -4.74,-0.29 -10.64,-0.29l-11.38 0 0 21.03z"/>
+        <path class="big-logo-path" d="M867.47 475.47c-42.36,-42.49 -385.31,-386.61 -426.46,-429.93 -80.34,-84.58 -162.73,-31.37 -161.27,35.48 1,46.36 43.73,76.25 74.13,107.03 128.42,130.01 431.26,436.64 459.34,465.53 19.64,20.2 46.37,23.34 68.33,19.16 33.63,-6.41 55.65,-37.28 79.42,-60.81 58.81,-58.23 162.36,-160.77 190.88,-188.96 40.51,-40.05 80.05,-98.44 21.75,-147.21 -58.29,-48.77 -113.04,11.59 -113.04,11.59l-193.08 188.13z"/>
+        <path class="big-logo-path" d="M678.43 863.89c-1,-6.53 -2.82,-13.05 -5.27,-19.49 -19.22,-50.48 -195.11,-216.64 -234.23,-256.79 -111.53,-114.48 -245.28,-251.75 -269.31,-278.6 -77.88,-87.02 -163.12,-37.48 -164.22,28.88 -0.39,23.58 9.09,44.44 25.06,61.18 148.45,155.56 307.24,307.88 454.31,464.2 -102.54,100.06 -309.66,301.41 -408.67,399.86 -30.4,30.23 -73.12,59.59 -74.13,105.12 -1.45,65.65 80.93,117.91 161.27,34.84 29.92,-30.94 221.55,-217.29 340.13,-332.68 44.46,-43.26 78.65,-76.55 90.2,-87.93 0,0 -1.85,-2.09 35.66,-36.24 30.28,-27.58 53.2,-56.18 49.19,-82.36z"/>
+        <path class="big-logo-path" d="M879.06 1052.46c-21.96,-4.11 -48.69,-1.02 -68.33,18.82 -28.08,28.37 -338.37,329.17 -466.79,456.86 -30.4,30.23 -73.12,59.59 -74.13,105.12 -1.45,65.65 80.93,117.91 161.27,34.84 41.14,-42.54 387.98,-378.87 430.33,-420.61l179.14 167.66c0,0 46.73,54.49 105.02,6.59 58.29,-47.9 38.91,-93.27 -1.6,-132.61 -35.04,-34.02 -229.28,-230.02 -264.92,-236.68z"/>
+        
+        <path class="big-logo-path" d="M3188.63 1518.82l0 -339.96c-23.15,0 -43.99,0 -59.27,0l0 339.96 0 47.71c14.15,0 35.02,0 59.27,0 48.37,0 110.15,0 158.68,0l0 -47.71c-48.53,0 -110.32,0 -158.68,0z"/>
+        <path class="big-logo-path" d="M3935.49 1518.82l0 -339.96c-23.15,0 -43.99,0 -59.27,0l0 339.96 0 47.71c14.15,0 35.02,0 59.27,0 48.37,0 110.15,0 158.68,0l0 -47.71c-48.53,0 -110.32,0 -158.68,0z"/>
+        <polygon class="big-logo-path" points="1665.25,1567.36 1813.15,1176.38 1751.54,1176.38 1633.42,1506.93 1519.41,1177.92 1454.38,1177.92 1603.75,1567.36 "/>
+        <path class="big-logo-path" d="M2312.77 1421.33l-19.7 52.27 -35.46 94.11 56.13 -0.37 35.27 -93.59c51.56,0.04 114.66,-0.12 173.46,-0.33l35.15 93.29 55.85 -0.37 -35.1 -93.15 -19.7 -52.27 -91.97 -244.07c-1.95,0 -3.89,0.01 -5.92,0.01 -16.91,0.04 -33.73,0.08 -50.11,0.1 -1.98,0 -3.96,0.01 -5.92,0.01l-92.07 244.33zm189.99 -0.19c-45.55,0.15 -92.59,0.26 -134.03,0.26l67.07 -177.98 66.97 177.72z"/>
+        <polygon class="big-logo-path" points="5346.32,1178.57 5491.98,1415.46 5491.98,1568.89 5548.92,1568.89 5548.92,1422.85 5698.52,1176.93 5631.97,1176.11 5523.1,1370.83 5413.42,1178.57 "/>
+        <path class="big-logo-path" d="M4840.38 1227.02l0 -48.76c-5.08,0 -10.27,0 -15.53,0 -48.24,0 -102.99,0 -148.33,0 -20.3,0 -38.71,0 -53.8,0l0 48.76 0 112.45 0 50.59 0 128.47 0 47.69c15.09,0 33.5,0 53.8,0 45.34,0 100.09,0 148.33,0 5.26,0 10.44,0 15.53,0l0 -47.69c-5.08,0 -10.27,0 -15.53,0 -48.24,0 -102.99,0 -148.33,0l0 -128.47c45.34,0 100.09,0 148.33,0l0 -50.59c-48.24,0 -102.99,0 -148.33,0l0 -112.45c45.34,0 100.09,0 148.33,0 5.26,0 10.44,0 15.53,0z"/>
       </g>
     </svg>
   </div>
@@ -397,9 +400,9 @@
                 </h2>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4 md:gap-6"">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4 md:gap-6">
                 
-                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
+                <div class="col-span-1 sm:col-span-2 row-span-2 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
                     <img src="./assets/foto-dr-roneely.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Imersão Principal">
                     <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                     <div class="absolute bottom-6 left-6 z-20">
@@ -408,7 +411,7 @@
                     </div>
                 </div>
 
-                 <div class="col-span-1 md:col-span-2 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
+                <div class="col-span-1 md:col-span-2 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
                     <img src="./assets/foto-3.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
                     <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                 </div>
@@ -421,7 +424,7 @@
                     </div>
                 </div>
 
-                 <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
                     <img src="./assets/foto-4.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
                     <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                 </div>
@@ -430,28 +433,27 @@
                     <img src="./assets/foto-2.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto Vertical">
                     <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                 </div>
-                 <div class="col-span-2 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
+
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
+                    <img src="./assets/foto-8.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
+                      <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
+                </div>
+                
+                 <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
+                    <img src="./assets/foto-9.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
+                      <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
+                </div>
+
+                <div class="col-span-1 md:col-span-2 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
                     <img src="./assets/foto-7-novo.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto Horizontal">
                       <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                 </div>
 
                  <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
-                    <img src="./assets/foto-8.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
+                    <img src="./assets/foto-17.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
                       <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                 </div>
-
-                 <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
-                    <img src="./assets/foto-9.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
-                      <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
-                </div>
-                 <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
-                    <img src="./assets/foto-10.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
-                      <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
-                </div>
-                 <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
-                    <img src="./assets/foto-6.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
-                      <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -473,75 +475,75 @@
       <div class="swiper-speakers swiper simple-reveal-hidden pl-6 md:pl-20">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-             <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
-                <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
-                  <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
-                </div>
-                <div class="text-center">
-                  <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
-                  <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
-                </div>
-             </div>
+              <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
+                 <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
+                   <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
+                 </div>
+                 <div class="text-center">
+                   <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
+                   <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
+                 </div>
+              </div>
           </div>
           
           <div class="swiper-slide">
-             <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
-                <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
-                  <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
-                </div>
-                <div class="text-center">
-                  <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
-                  <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
-                </div>
-             </div>
+              <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
+                 <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
+                   <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
+                 </div>
+                 <div class="text-center">
+                   <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
+                   <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
+                 </div>
+              </div>
           </div>
 
           <div class="swiper-slide">
-             <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
-                <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
-                  <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
-                </div>
-                <div class="text-center">
-                  <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
-                  <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
-                </div>
-             </div>
+              <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
+                 <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
+                   <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
+                 </div>
+                 <div class="text-center">
+                   <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
+                   <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
+                 </div>
+              </div>
           </div>
 
           <div class="swiper-slide">
-             <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
-                <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
-                  <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
-                </div>
-                <div class="text-center">
-                  <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
-                  <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
-                </div>
-             </div>
+              <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
+                 <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
+                   <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
+                 </div>
+                 <div class="text-center">
+                   <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
+                   <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
+                 </div>
+              </div>
           </div>
           
-           <div class="swiper-slide">
-             <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
-                <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
-                  <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
-                </div>
-                <div class="text-center">
-                  <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
-                  <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
-                </div>
-             </div>
+            <div class="swiper-slide">
+              <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
+                 <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
+                   <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
+                 </div>
+                 <div class="text-center">
+                   <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
+                   <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
+                 </div>
+              </div>
           </div>
 
-           <div class="swiper-slide">
-             <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
-                <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
-                  <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
-                </div>
-                <div class="text-center">
-                  <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
-                  <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
-                </div>
-             </div>
+            <div class="swiper-slide">
+              <div class="md:w-[350px] group relative cursor-pointer" onclick="openSpeakerModal('EM BREVE', 'Surpresa')">
+                 <div class="rounded-2xl overflow-hidden aspect-[3/4] mb-6 relative shadow-2xl border border-brand-blue-mid bg-brand-blue-mid/30 flex items-center justify-center group-hover:border-brand-gold/50 transition duration-500 hover-glow-blue">
+                   <span class="text-8xl text-brand-blue-accent/50 group-hover:text-brand-gold transition font-display">?</span>
+                 </div>
+                 <div class="text-center">
+                   <h4 class="text-4xl font-bold text-gray-500 font-display uppercase">Em Breve</h4>
+                   <p class="text-brand-gold/50 text-sm uppercase font-bold tracking-wider mt-2">Surpresa</p>
+                 </div>
+              </div>
           </div>
 
         </div>
@@ -577,138 +579,100 @@
                <div class="h-full flex-1 rounded-sm bg-white/5"></div>
                <div class="h-full flex-1 rounded-sm bg-white/5"></div>
                <div class="h-full flex-1 rounded-sm bg-white/5"></div>
+               <div class="h-full flex-1 rounded-sm bg-white/5"></div>
             </div>
         </div>
 
+    
+      
+        <section id="patrocinio" class="py-24 bg-brand-blue-dark relative border-t border-brand-blue-mid/30">
+
+      <div class="container mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-            <span class="text-brand-blue-accent uppercase tracking-[0.3em] text-xs font-bold font-display">Garanta sua vaga</span>
-            <h2 class="text-3xl md:text-6xl font-bold text-white mt-4 font-display uppercase">
-              ESCOLHA SEU <span class="text-brand-gold">PASSE</span>
-            </h2>
+          <span class="text-brand-blue-accent uppercase tracking-[0.3em] text-xs font-bold font-display">Oportunidade de Negócios</span>
+          <h2 class="text-3xl md:text-6xl font-bold text-white mt-4 font-display uppercase">
+            CATEGORIAS DE <span class="text-brand-gold">PATROCÍNIO</span>
+          </h2>
+          <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Exponha sua marca para os maiores players do mercado.</p>
         </div>
 
-        <div class="md:hidden text-center text-gray-400 text-xs mb-2 animate-pulse">
-          ← Arraste para ver os planos →
-        </div>
-
-        <div class="overflow-x-auto pb-8 custom-scrollbar">
-          <div class="min-w-[900px] max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          
+          <div class="sponsor-card rounded-3xl p-8 border border-gray-700 hover:border-gray-400 group">
+            <div class="mb-6">
+               <h3 class="text-3xl font-black text-gray-300 font-display uppercase italic mb-2">PRATA</h3>
+            </div>
             
-            <div class="grid grid-cols-4 gap-4 mb-4">
-              <div class="flex items-end pb-4">
-                 <span class="text-gray-500 text-sm font-display tracking-widest uppercase">Comparativo</span>
-              </div>
+            <ul class="space-y-4 text-sm text-gray-400 mb-8 check-list">
+              <li>Direito a um balcão totem para divulgação da marca.</li>
+              <li>Logo na área de patrocinadores do site oficial do evento.</li>
+              <li>Divulgação da Marca apoiadora no Instagram do evento.</li>
+              <li>2 vouchers para participar do evento, por empresa.</li>
+              <li>1 Vaga para acesso a Área VIP.</li>
+              <li>1 Vaga para o lançamento oficial.</li>
+            </ul>
 
-              <div class="relative rounded-t-2xl overflow-hidden group">
-                <div class="absolute inset-0 bg-brand-blue-mid opacity-90 border border-white/10"></div>
-                <div class="relative p-6 text-center flex flex-col h-full justify-between">
-                  <div>
-                    <h3 class="text-2xl font-black text-[#C0C0C0] font-display uppercase italic">PRATA</h3>
-                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-wide">Acesso Essencial</p>
-                  </div>
-                  <div class="mt-6">
-                    <p class="text-xs text-gray-400">12x de R$ 14,76</p>
-                    <div class="text-3xl font-bold text-white font-display">R$ 147<span class="text-sm font-normal text-gray-400">,00</span></div>
-                    <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Tenho+interesse+no+ingresso+PRATA+do+Connect+Valley." target="_blank" class="block w-full mt-4 py-3 bg-white/10 hover:bg-white text-white hover:text-brand-blue-dark font-bold text-xs uppercase tracking-widest rounded transition-all duration-300">
-                      Comprar Agora
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="relative rounded-t-2xl overflow-hidden group transform md:-translate-y-4 shadow-[0_0_30px_rgba(242,201,76,0.3)] z-10">
-                <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold"></div>
-                <div class="absolute inset-0 bg-gradient-to-b from-brand-gold/20 to-brand-blue-mid border border-brand-gold/50"></div>
-                <div class="relative p-6 text-center flex flex-col h-full justify-between">
-                  <div>
-                    <div class="inline-block bg-brand-gold text-brand-blue-dark text-[10px] font-bold px-2 py-0.5 rounded mb-2 uppercase">Mais Vendido</div>
-                    <h3 class="text-3xl font-black text-brand-gold font-display uppercase italic">OURO</h3>
-                    <p class="text-brand-gold/70 text-xs mt-2 uppercase tracking-wide">Experiência Completa</p>
-                  </div>
-                  <div class="mt-6">
-                    <p class="text-xs text-brand-gold">12x de R$ 29,82</p>
-                    <div class="text-4xl font-bold text-white font-display text-shadow-glow-blue">R$ 297<span class="text-sm font-normal text-gray-400">,00</span></div>
-                    <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Tenho+interesse+no+ingresso+OURO+do+Connect+Valley." target="_blank" class="block w-full mt-4 py-3 bg-brand-gold hover:bg-white text-brand-blue-dark font-bold text-xs uppercase tracking-widest rounded transition-all duration-300 shadow-lg shadow-brand-gold/20">
-                      Comprar Agora
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="relative rounded-t-2xl overflow-hidden group">
-                <div class="absolute top-0 left-0 w-full h-1 bg-cyan-400"></div>
-                <div class="absolute inset-0 bg-gradient-to-b from-cyan-400/10 to-brand-blue-mid border border-cyan-400/30"></div>
-                <div class="relative p-6 text-center flex flex-col h-full justify-between">
-                  <div>
-                    <h3 class="text-2xl font-black text-cyan-400 font-display uppercase italic">DIAMANTE</h3>
-                    <p class="text-cyan-400/70 text-xs mt-2 uppercase tracking-wide">Acesso Vip</p>
-                  </div>
-                  <div class="mt-6">
-                    <p class="text-xs text-cyan-400">12x de R$ 59,94</p>
-                    <div class="text-3xl font-bold text-white font-display">R$ 597<span class="text-sm font-normal text-gray-400">,00</span></div>
-                    <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Tenho+interesse+no+ingresso+DIAMANTE+do+Connect+Valley." target="_blank" class="block w-full mt-4 py-3 bg-transparent border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-brand-blue-dark font-bold text-xs uppercase tracking-widest rounded transition-all duration-300">
-                      Comprar Agora
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="mt-auto">
+              <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Tenho+interesse+na+Categoria+PRATA+do+Connect+Valley." target="_blank" class="block w-full py-4 text-center border border-gray-500 text-gray-300 font-bold uppercase tracking-widest rounded-xl hover:bg-gray-200 hover:text-brand-blue-dark transition-all duration-300">
+                Reservar Categoria
+              </a>
             </div>
-
-            <div class="flex flex-col gap-[2px]">
-              
-              <div class="grid grid-cols-4 bg-white/5 hover:bg-white/10 transition-colors">
-                <div class="p-4 flex items-center text-sm font-bold text-gray-300">Acesso aos 2 Dias</div>
-                <div class="p-4 flex items-center justify-center bg-brand-blue-mid/30"><svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-brand-gold/10 border-x border-brand-gold/20"><svg class="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-cyan-400/5"><svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-              </div>
-
-              <div class="grid grid-cols-4 bg-brand-blue-dark hover:bg-white/5 transition-colors">
-                <div class="p-4 flex items-center text-sm font-bold text-gray-300">Palestras Palco 360°</div>
-                <div class="p-4 flex items-center justify-center bg-brand-blue-mid/30"><svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-brand-gold/10 border-x border-brand-gold/20"><svg class="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-cyan-400/5"><svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-              </div>
-
-              <div class="grid grid-cols-4 bg-white/5 hover:bg-white/10 transition-colors">
-                <div class="p-4 flex items-center text-sm font-bold text-gray-300">Certificado Digital</div>
-                <div class="p-4 flex items-center justify-center bg-brand-blue-mid/30"><svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-brand-gold/10 border-x border-brand-gold/20"><svg class="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-cyan-400/5"><svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-              </div>
-
-               <div class="grid grid-cols-4 bg-brand-blue-dark hover:bg-white/5 transition-colors">
-                <div class="p-4 flex items-center text-sm font-bold text-gray-300">Kit Boas Vindas</div>
-                <div class="p-4 flex items-center justify-center bg-brand-blue-mid/30"><div class="w-2 h-2 rounded-full bg-gray-700"></div></div>
-                <div class="p-4 flex items-center justify-center bg-brand-gold/10 border-x border-brand-gold/20"><svg class="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-cyan-400/5"><span class="text-[10px] font-bold text-brand-blue-dark bg-cyan-400 px-2 py-0.5 rounded">VIP</span></div>
-              </div>
-
-              <div class="grid grid-cols-4 bg-white/5 hover:bg-white/10 transition-colors">
-                <div class="p-4 flex items-center text-sm font-bold text-gray-300">Lounge Exclusivo</div>
-                <div class="p-4 flex items-center justify-center bg-brand-blue-mid/30 opacity-20"><svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-brand-gold/10 border-x border-brand-gold/20 opacity-20"><svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-cyan-400/5"><svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-              </div>
-
-               <div class="grid grid-cols-4 bg-brand-blue-dark hover:bg-white/5 transition-colors">
-                <div class="p-4 flex items-center text-sm font-bold text-gray-300">Jantar com Speakers</div>
-                <div class="p-4 flex items-center justify-center bg-brand-blue-mid/30 opacity-20"><svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-brand-gold/10 border-x border-brand-gold/20 opacity-20"><svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-cyan-400/5"><svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-              </div>
-
-               <div class="grid grid-cols-4 bg-white/5 hover:bg-white/10 transition-colors">
-                <div class="p-4 flex items-center text-sm font-bold text-gray-300">Mentoria Pós-Evento</div>
-                <div class="p-4 flex items-center justify-center bg-brand-blue-mid/30 opacity-20"><svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-brand-gold/10 border-x border-brand-gold/20 opacity-20"><svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></div>
-                <div class="p-4 flex items-center justify-center bg-cyan-400/5"><svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div>
-              </div>
-
-            </div>
-
           </div>
+
+          <div class="sponsor-card rounded-3xl p-8 border border-brand-gold/50 bg-brand-gold/5 transform lg:-translate-y-4 shadow-[0_0_40px_rgba(242,201,76,0.1)] group">
+             <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold"></div>
+             <div class="mb-6">
+               <h3 class="text-4xl font-black text-brand-gold font-display uppercase italic mb-2">OURO</h3>
+            </div>
+            
+            <ul class="space-y-4 text-sm text-gray-300 mb-8 check-list">
+              <li class="text-white font-bold">Stand para divulgação da marca 3m x 3m x 3m.</li>
+              <li>Logo em destaque maior no site, materiais promocionais e cenário oficial.</li>
+              <li>Ministrar uma oficina no palco Valley (15min).</li>
+              <li>Inserção de flyers.</li>
+              <li>Logo na área de patrocinadores do site.</li>
+              <li>Divulgação da Marca no Instagram.</li>
+              <li>5 Vouchers para participar do evento.</li>
+              <li>2 Vagas para acesso a Área VIP.</li>
+              <li>2 Vagas para o lançamento oficial.</li>
+            </ul>
+
+            <div class="mt-auto">
+              <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Tenho+interesse+na+Categoria+OURO+do+Connect+Valley." target="_blank" class="block w-full py-4 text-center bg-brand-gold text-brand-blue-dark font-bold uppercase tracking-widest rounded-xl hover:bg-white transition-all duration-300 shadow-lg shadow-brand-gold/20">
+                Reservar Categoria
+              </a>
+            </div>
+          </div>
+
+          <div class="sponsor-card rounded-3xl p-8 border border-cyan-400/50 bg-cyan-400/5 group">
+            <div class="mb-6">
+               <h3 class="text-3xl font-black text-cyan-400 font-display uppercase italic mb-2">DIAMANTE</h3>
+            </div>
+            
+            <ul class="space-y-4 text-sm text-gray-400 mb-8 check-list">
+              <li class="text-cyan-400 font-bold">Exclusividade por segmento nessa cota.</li>
+              <li class="text-white font-bold">Uma palestra no palco Valley (15min).</li>
+              <li>Stand 3m x 3m x 3m.</li>
+              <li>Exposição da marca no telão durante os intervalos.</li>
+              <li>Logo em destaque maior no site e materiais.</li>
+              <li>Logo na área de patrocinadores do site.</li>
+              <li>Divulgação da Marca no Instagram.</li>
+              <li>Inserção de flyers.</li>
+              <li>8 Vouchers para participar do evento.</li>
+              <li>2 Vagas para acesso a Área VIP.</li>
+              <li>2 Vagas para o lançamento oficial.</li>
+            </ul>
+
+            <div class="mt-auto">
+              <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Tenho+interesse+na+Categoria+DIAMANTE+do+Connect+Valley." target="_blank" class="block w-full py-4 text-center border border-cyan-400 text-cyan-400 font-bold uppercase tracking-widest rounded-xl hover:bg-cyan-400 hover:text-brand-blue-dark transition-all duration-300">
+                Reservar Categoria
+              </a>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
         
         <div class="text-center mt-8">
             <p class="text-gray-400 text-sm">Precisa de ingressos corporativos? <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Gostaria+de+saber+sobre+ingressos+corporativos+para+o+Connect+Valley." target="_blank" class="text-brand-gold font-bold hover:underline">Entre em contato</a></p>
@@ -791,7 +755,7 @@
             </div>
             <div class="faq-answer text-gray-400 text-lg leading-relaxed"><p class="pb-4">O Centro de Convenções dispõe de estacionamento próprio gratuito e seguro para os participantes, sujeito à lotação.</p></div>
           </div>
-           <div class="faq-item cursor-pointer group" onclick="this.classList.toggle('active')">
+            <div class="faq-item cursor-pointer group" onclick="this.classList.toggle('active')">
             <div class="flex justify-between items-center py-4">
               <h4 class="font-bold text-gray-200 group-hover:text-brand-gold transition text-2xl">Como funcionam as formas de pagamento?</h4>
               <span class="text-brand-gold text-2xl faq-icon transition-transform duration-300">+</span>
@@ -812,7 +776,7 @@
           
           <div class="swiper-gallery-top swiper simple-reveal-hidden pl-6 md:pl-20 mb-8">
             <div class="swiper-wrapper">
-              <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-1.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
+              <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-dr-roneely.jpg" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-2.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-3.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-4.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
@@ -835,22 +799,6 @@
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-16.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
             </div>
           </div>
-    </section>
-
-    <section class="min-h-[50vh] relative flex flex-col items-center justify-center overflow-hidden bg-brand-blue-dark border-t border-brand-blue-mid/30 pb-8">
-      <div class="absolute inset-0 bg-blue-glow opacity-20"></div>
-      <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
-      <div class="relative z-10 text-center max-w-5xl px-6 simple-reveal-hidden">
-        <h2 class="text-6xl md:text-[8rem] font-black mb-12 tracking-tighter text-white drop-shadow-2xl font-display uppercase leading-[0.85]">
-          O FUTURO <br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-b from-gray-200 to-gray-600">COMEÇA AGORA</span>
-        </h2>
-        <div class="inline-flex items-center justify-center p-1 rounded-full bg-gradient-to-r from-brand-gold to-brand-blue-accent scale-110 hover:scale-125 transition duration-500 cursor-default">
-            <div class="bg-brand-blue-dark rounded-full px-12 py-6 border border-white/10 shadow-[0_0_50px_rgba(242,201,76,0.2)]">
-                <span class="text-2xl md:text-4xl font-display font-black text-brand-gold tracking-widest uppercase">AGUARDE</span>
-            </div>
-        </div>
-      </div>
     </section>
 
     <section class="py-16 bg-brand-blue-dark border-t border-brand-blue-mid/30">
@@ -1086,32 +1034,6 @@
           btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0px, 0px)'; });
         }
       }
-
-// --- ANIMAÇÃO DEPTH EFFECT (Texto Atrás) ---
-      
-      // 1. O Texto se move levemente para baixo (mais lento que o scroll)
-      gsap.to(".depth-text", {
-        yPercent: 30, // Move 30% para baixo
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".depth-image",
-          start: "top bottom", // Começa quando a imagem entra na tela
-          end: "bottom top",   // Termina quando sai
-          scrub: true
-        }
-      });
-
-      // 2. A imagem da pessoa sobe levemente (dando a sensação de solidez)
-      gsap.from(".depth-image", {
-        y: 100, // Começa 100px mais para baixo
-        opacity: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".depth-image",
-          start: "top 80%", // Começa quando o topo da sessão está a 80% da tela
-        }
-      });
     </script>
   </body>
 </html>
