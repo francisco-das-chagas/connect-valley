@@ -262,23 +262,53 @@
       </div>
     </header>
 
-    <div id="bottom-bar" class="fixed bottom-0 left-0 w-full fixed-bottom-bar z-50 py-6 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-4 text-white">
-        <span class="text-sm uppercase text-gray-400 tracking-widest hidden md:block font-display">O evento começa em:</span>
-        <div class="flex gap-2 text-brand-gold font-bold font-mono text-3xl md:text-4xl">
-          <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+    <div id="bottom-bar" class="fixed bottom-0 left-0 w-full fixed-bottom-bar z-50 py-3 px-3 md:py-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-3 bg-[#030816]/95 backdrop-blur-xl border-t border-[#F2C94C]/30 shadow-2xl">
+      
+      <div class="flex flex-col items-center md:items-start gap-1 w-full md:w-auto">
+        <span class="text-[9px] md:text-sm uppercase text-gray-400 tracking-[0.2em] font-display">O evento começa em:</span>
+        
+        <div class="flex items-center justify-center gap-2 text-brand-gold font-bold font-mono w-full">
+          
+          <div class="flex flex-col md:flex-row items-center bg-white/5 rounded-lg px-3 py-1 md:bg-transparent md:p-0 min-w-[50px] md:min-w-0">
+            <span id="days" class="text-lg md:text-4xl leading-none">00</span>
+            <span class="text-[9px] md:text-lg text-gray-500 md:ml-1 uppercase">d</span>
+          </div>
+
+          <span class="text-gray-600 text-xs md:text-2xl mb-2 md:mb-0">:</span>
+
+          <div class="flex flex-col md:flex-row items-center bg-white/5 rounded-lg px-3 py-1 md:bg-transparent md:p-0 min-w-[50px] md:min-w-0">
+            <span id="hours" class="text-lg md:text-4xl leading-none">00</span>
+            <span class="text-[9px] md:text-lg text-gray-500 md:ml-1 uppercase">h</span>
+          </div>
+
+          <span class="text-gray-600 text-xs md:text-2xl mb-2 md:mb-0">:</span>
+
+          <div class="flex flex-col md:flex-row items-center bg-white/5 rounded-lg px-3 py-1 md:bg-transparent md:p-0 min-w-[50px] md:min-w-0">
+            <span id="minutes" class="text-lg md:text-4xl leading-none">00</span>
+            <span class="text-[9px] md:text-lg text-gray-500 md:ml-1 uppercase">m</span>
+          </div>
+
+          <span class="text-gray-600 text-xs md:text-2xl mb-2 md:mb-0">:</span>
+
+          <div class="flex flex-col md:flex-row items-center bg-white/5 rounded-lg px-3 py-1 md:bg-transparent md:p-0 min-w-[50px] md:min-w-0">
+            <span id="seconds" class="text-lg md:text-4xl leading-none">00</span>
+            <span class="text-[9px] md:text-lg text-gray-500 md:ml-1 uppercase">s</span>
+          </div>
+
         </div>
       </div>
-      <div class="w-full md:max-w-md flex flex-col gap-2">
-        <div class="flex justify-between text-xs uppercase font-bold tracking-wider text-gray-300 font-display">
+
+      <div class="w-full md:max-w-md flex flex-col gap-1">
+        <div class="flex justify-between text-[9px] md:text-xs uppercase font-bold tracking-wider text-gray-400 font-display">
           <span class="text-brand-gold">PRÉ-VENDA EM BREVE</span>
           <span class="text-gray-500">0% Vendido</span>
         </div>
-        <div class="w-full h-4 bg-gray-800 rounded-full overflow-hidden border border-gray-700">
-          <div class="h bg-gradient-to-r from-brand-blue-accent to-brand-gold progress-fill" ></div> 
+        <div class="w-full h-2 md:h-4 bg-gray-800 rounded-full overflow-hidden border border-gray-700">
+          <div class="h-full bg-gradient-to-r from-brand-blue-accent to-brand-gold progress-fill" ></div> 
         </div>
       </div>
-      <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Gostaria+de+comprar+meu+ingresso." target="_blank" class="hidden md:block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded text-sm font-bold uppercase tracking-wider transition font-display">
+
+      <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Gostaria+de+comprar+meu+ingresso." target="_blank" class="hidden md:block bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded text-sm font-bold uppercase tracking-wider transition font-display whitespace-nowrap border border-white/5">
         Comprar Agora
       </a>
     </div>
@@ -412,7 +442,7 @@
                 </div>
 
                 <div class="col-span-1 md:col-span-2 relative group overflow-hidden rounded-2xl border border-brand-blue-mid hover-glow-blue cursor-pointer">
-                    <img src="./assets/foto-3.JPG" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
+                    <img src="./assets/foto-3.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 brightness-90 group-hover:brightness-110" alt="Foto">
                     <div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div>
                 </div>
 
@@ -680,41 +710,25 @@
       </div>
     </section>
 
-    <section id="patrocinadores" class="py-24 bg-brand-blue-dark border-t border-brand-blue-mid/30 relative">
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="text-center mb-16">
-            <span class="text-brand-blue-accent uppercase tracking-[0.3em] text-xs font-bold font-display">Quem faz acontecer</span>
-            <h2 class="text-3xl md:text-6xl font-bold text-white mt-4 font-display uppercase">
-              NOSSOS <span class="text-brand-gold">PATROCINADORES</span>
-            </h2>
-            <p class="text-gray-400 text-sm uppercase tracking-widest mt-4">Patrocinadores que já fizeram parte do último evento</p>
-        </div>
-        
-        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-90 max-w-6xl mx-auto">
-              <img src="./assets/patrocinadores.png" alt="Mural de Patrocinadores" class="w-full max-w-5xl mx-auto object-contain">
-        </div>
+    <section id="construtores" class="py-24 bg-brand-blue-dark border-t border-brand-blue-mid/30 relative overflow-hidden">
+  
+  <div class="container mx-auto px-6 relative z-10 text-center mb-16">
+      <span class="text-brand-blue-accent uppercase tracking-[0.3em] text-xs font-bold font-display">Quem faz acontecer</span>
+      <h2 class="text-3xl md:text-5xl font-bold text-white mt-4 font-display uppercase">
+        CONSTRUTORES <span class="text-brand-gold">GALT'S VALLEY</span>
+      </h2>
+      <p class="text-gray-400 text-sm uppercase tracking-widest mt-4">Empresas que já fizeram parte da nossa história.</p>
+  </div>
 
+  <div class="w-full relative z-10 flex flex-col md:flex-row overflow-hidden opacity-90 border-y border-brand-blue-mid/30">     
+      <div class="flex-1 relative group border-b md:border-b-0 md:border-r border-brand-blue-mid/30">
+           <img src="./assets/patrocinadores.png" alt="Mural de Patrocinadores Parte 1" class="w-full h-[220px] md:h-[700px] object-cover grayscale group-hover:grayscale-0 transition duration-700 ease-in-out">
+           <div class="absolute inset-0 bg-brand-blue-dark/30 mix-blend-multiply group-hover:bg-transparent transition duration-700"></div>
       </div>
-    </section>
+  </div>
+</section>
 
-    <section id="patrocinio" class="py-32 bg-brand-blue-dark relative border-t border-brand-blue-mid/30">
-      <div class="container mx-auto px-6 relative z-10">
-        <div class="text-center mb-16">
-          <span class="text-brand-blue-accent uppercase tracking-[0.3em] text-xs font-bold font-display">Oportunidade</span>
-          <h2 class="text-3xl md:text-6xl font-bold text-white mt-4 text-hidden text-reveal-trigger font-display">
-            SEJA UM <span class="text-brand-gold">PATROCINADOR</span>
-          </h2>
-          <p class="text-gray-400 mt-4 max-w-2xl mx-auto blur-reveal">Conecte sua marca aos maiores players da região. Escolha seu plano de stand.</p>
-        </div>
-
-        <div class="text-center">
-            <a href="https://wa.me/5588993832512?text=Ol%C3%A1%21+Tenho+interesse+em+ser+PATROCINADOR+do+Connect+Valley." target="_blank" class="bg-brand-gold text-brand-blue-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-white transition-all shadow-lg font-display text-lg">
-                Entre em Contato
-            </a>
-        </div>
-
-        </div>
-    </section>
+    
 
     <section class="py-24 bg-brand-blue-mid/20 border-t border-brand-blue-accent/10">
       <div class="container mx-auto px-6 max-w-5xl">
@@ -778,7 +792,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-dr-roneely.jpg" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-2.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
-              <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-3.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
+              <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-3.webp" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-4.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-5.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
               <div class="swiper-slide hover-glow-blue"><div class="relative h-64 w-[400px] shrink-0 rounded-xl overflow-hidden border border-brand-blue-mid group"><img src="./assets/foto-6.JPG" class="h-full w-full object-cover brightness-90 group-hover:brightness-110 transition duration-500" /><div class="absolute inset-0 bg-brand-blue-dark mix-blend-multiply opacity-50 group-hover:opacity-0 transition duration-500"></div></div></div>
@@ -809,9 +823,6 @@
                     <div class="h-32 w-72 md:h-40 md:w-96 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 hover:border-brand-gold/50 transition">
                        <img src="./assets/logos/logo-rf-feitosa-group.svg" alt="Feitosa Group" class="w-full h-full p-6 object-contain">
                     </div>
-                    <p class="text-gray-400 text-sm mt-2 max-w-xs leading-relaxed text-justify">
-                      O RFEITOSA Group é um ecossistema empresarial que reúne inovação, solidez e visão estratégica. Formado por empresas que atuam em diferentes segmentos: gestão imobiliária, soluções empresariais, assessoria jurídica e ensino de negócios e estrtégia.
-                    </p>
                  </div>
             </div>
         </div>
